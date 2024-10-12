@@ -1,13 +1,12 @@
-// src/App.js
-import './index.css';
-import BookList from './components/bookList';
+// import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+import AppRoutes from './routes/AppRoute';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Book List</h1>
-      <BookList />
-    </div>
+    <Router>
+      <AppRoutes />
+    </Router>
   );
 }
 

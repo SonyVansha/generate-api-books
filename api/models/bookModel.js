@@ -1,13 +1,16 @@
 const { faker } = require('@faker-js/faker');
 const createSlug  = require('../utils/slugCreator');
 const formatDate = require('../utils/formatDate');
+require('dotenv').config()
+
+const postnumber = process.env.POST_NUMBER || 20;
 
 // Fungsi untuk membuat data buku
 const createBook = () => {
   // Array untuk menyimpan data buku
   const books = []; 
 
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < postnumber; i++) {
     // Dapatkan tanggal acak dari masa lalu
     const randomDate = faker.date.past();
     const title = faker.commerce.productName();

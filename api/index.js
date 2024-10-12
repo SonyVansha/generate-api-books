@@ -1,5 +1,7 @@
 const express = require('express');
-const bookRoutes = require('./routes/bookRoutes'); // Impor rute buku
+// Impor rute buku
+const bookRoutes = require('./routes/bookRoutes');
+
 const app = express();
 const port = 3000;
 
